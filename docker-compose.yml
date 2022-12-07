@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  db:
+    container_name: Tryitter_db
+    image: mcr.microsoft.com/mssql/server:2019-latest
+    platform: linux/x86_64
+    restart: always
+    ports:
+      - 1450:1450
+      - 11450:11450
+    environment:
+      PASSWORD: password@2022
+
+networks:
+  default:
+    name: Tryitter_net
