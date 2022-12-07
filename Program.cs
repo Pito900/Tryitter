@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllers();
-builder.Services.AddDbContext<Context>(
+builder.Services.AddDbContext<Context>( // Essa ainda n é a string de vdd.
     options => options.UseSqlServer("Data Source=localhost,1450, Persist Security=True, Password=password@2022")
 );
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
