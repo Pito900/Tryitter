@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/home/monteiro/Área de Trabalho/Trybe/Aceleração C#/Tryitter/Tryitter/Tryitter.csproj": {}
+    "/home/fabvicente/repositorios/aceleracao-CS/desafio-final/Tryitter/Tryitter.csproj": {}
   },
   "projects": {
-    "/home/monteiro/Área de Trabalho/Trybe/Aceleração C#/Tryitter/Tryitter/Tryitter.csproj": {
+    "/home/fabvicente/repositorios/aceleracao-CS/desafio-final/Tryitter/Tryitter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/monteiro/Área de Trabalho/Trybe/Aceleração C#/Tryitter/Tryitter/Tryitter.csproj",
+        "projectUniqueName": "/home/fabvicente/repositorios/aceleracao-CS/desafio-final/Tryitter/Tryitter.csproj",
         "projectName": "Tryitter",
-        "projectPath": "/home/monteiro/Área de Trabalho/Trybe/Aceleração C#/Tryitter/Tryitter/Tryitter.csproj",
-        "packagesPath": "/home/monteiro/.nuget/packages/",
-        "outputPath": "/home/monteiro/Área de Trabalho/Trybe/Aceleração C#/Tryitter/Tryitter/obj/",
+        "projectPath": "/home/fabvicente/repositorios/aceleracao-CS/desafio-final/Tryitter/Tryitter.csproj",
+        "packagesPath": "/home/fabvicente/.nuget/packages/",
+        "outputPath": "/home/fabvicente/repositorios/aceleracao-CS/desafio-final/Tryitter/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/home/monteiro/.nuget/NuGet/NuGet.Config"
+          "/home/fabvicente/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -44,7 +44,7 @@
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
+              "suppressParent": "None",
               "target": "Package",
               "version": "[7.0.0, )"
             },
@@ -76,7 +76,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.401/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.403/RuntimeIdentifierGraph.json"
         }
       }
     }
