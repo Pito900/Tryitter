@@ -1,6 +1,14 @@
 version: "3"
 
 services:
+  api:
+    container_name: Tryitter_api
+    build: ./
+    ports:
+      - "5000:80"
+    depends_on:
+      - db
+
   db:
     container_name: Tryitter_db
     image: mcr.microsoft.com/mssql/server:2019-latest
