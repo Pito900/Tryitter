@@ -15,10 +15,10 @@ public class Post
   public int StudentId { get; set; }
 
   [ForeignKey("StudentId")] 
-  public Student Student { get; set; }
+  public Student? Student { get; set; }
 
   [InverseProperty("Post")]
-  public ICollection<Picture> Pictures { get; set; }
+  public ICollection<Picture>? Pictures { get; set; }
 
   public DateTime CreatedAt { get; set; }
 
