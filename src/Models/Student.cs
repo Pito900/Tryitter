@@ -29,7 +29,7 @@ public class Student
   public string Status { get; set; }
 
   [InverseProperty("Student")]
-  public ICollection<Post> Posts { get; set; }
+  public ICollection<Post>? Posts { get; set; }
 
   public DateTime CreatedAt { get; set; }
 

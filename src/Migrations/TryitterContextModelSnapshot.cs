@@ -4,11 +4,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using Tryitter.Repository;
+using Tryitter.Repositories;
 
 #nullable disable
 
-namespace Tryitter.Migrations
+namespace tryitter.Migrations
 {
     [DbContext(typeof(TryitterContext))]
     partial class TryitterContextModelSnapshot : ModelSnapshot
@@ -21,29 +21,6 @@ namespace Tryitter.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
-
-            modelBuilder.Entity("Tryitter.Models.Picture", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("Data")
-                        .IsRequired()
-                        .HasMaxLength(300)
-                        .HasColumnType("nvarchar(300)");
-
-                    b.Property<int>("PostId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("PostId");
-
-                    b.ToTable("Picture");
-                });
 
             modelBuilder.Entity("Tryitter.Models.Post", b =>
                 {
@@ -60,6 +37,10 @@ namespace Tryitter.Migrations
 
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("Picture")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("StudentId")
                         .HasColumnType("int");
@@ -118,17 +99,6 @@ namespace Tryitter.Migrations
                     b.ToTable("Student");
                 });
 
-            modelBuilder.Entity("Tryitter.Models.Picture", b =>
-                {
-                    b.HasOne("Tryitter.Models.Post", "Post")
-                        .WithMany("Pictures")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Post");
-                });
-
             modelBuilder.Entity("Tryitter.Models.Post", b =>
                 {
                     b.HasOne("Tryitter.Models.Student", "Student")
@@ -138,11 +108,6 @@ namespace Tryitter.Migrations
                         .IsRequired();
 
                     b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("Tryitter.Models.Post", b =>
-                {
-                    b.Navigation("Pictures");
                 });
 
             modelBuilder.Entity("Tryitter.Models.Student", b =>
