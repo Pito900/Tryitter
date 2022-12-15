@@ -54,7 +54,6 @@ public class StudentController : ControllerBase, IStudentController
   }
 
   [HttpPost]
-  [Authorize(Policy = "Student")]
   public async Task<ActionResult<Student>> CreateStudent([FromBody] Student student)
   {
     Student createdStudent = await _repository.Create(student);
